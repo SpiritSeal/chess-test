@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Chess</h1>
+    <div class="game-container">
+      <div class="sidebar left">
+        <div class="captured" id="captured-white"></div>
+        <div class="player-label" id="label-black">Black</div>
+      </div>
+      <div class="board-wrap">
+        <div class="coord-col" id="rank-labels"></div>
+        <div>
+          <div class="board" id="board"></div>
+          <div class="coord-row" id="file-labels"></div>
+        </div>
+      </div>
+      <div class="sidebar right">
+        <div class="captured" id="captured-black"></div>
+        <div class="player-label" id="label-white">White</div>
+      </div>
+    </div>
+    <div class="status" id="status">White to move</div>
+    <div class="controls">
+      <button id="btn-new">New Game</button>
+      <button id="btn-flip">Flip Board</button>
+      <button id="btn-undo">Undo</button>
+    </div>
+    <div class="move-history" id="move-history"></div>
+  </div>
+
+  <div class="modal hidden" id="promo-modal">
+    <div class="modal-box">
+      <div class="modal-title">Choose promotion piece</div>
+      <div class="promo-choices" id="promo-choices"></div>
+    </div>
+  </div>
+
+  <script src="chess.js"></script>
+</body>
+</html>
